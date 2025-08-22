@@ -32,7 +32,7 @@ class Carousel {
         const carouselElement = document.getElementById("carousel");
         const titleElement = document.getElementById("carousel-title");
 
-        if(!carouselElement || titleElement){
+        if(!carouselElement || !titleElement){
             console.error("elemento do carrossel não encontrado!");
             return;
         }
@@ -44,13 +44,9 @@ class Carousel {
         carouselElement.style.backgroundSize = "cover";
         carouselElement.style.transition = "background-image 0.5s ease-in-out";
 
-        titleElement.innerHTML = `<a href= "${item.uri}"> ${item.title}`>
+        titleElement.innerHTML = `<a href="${item.uri}">${item.title}</a>`;
 
-        Carousel._sequence =( Carousel._sequence + 1) % Carousel._size;
+        Carousel._sequence = ( Carousel._sequence + 1) % Carousel._size;
 
     }
-
-
-
-
 };
