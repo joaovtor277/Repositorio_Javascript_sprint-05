@@ -19,7 +19,7 @@ class Car {
     }
 }
 
-// search on array if exist carClass returning 1 if not return -1
+
 function GetCarArrPosition(arr, carClass) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i].nome === carClass.nome)
@@ -54,7 +54,7 @@ function SetCarToCompare(el, carClass) {
 }
 
 function botaoComparar() {
-    const compareBtn = document.querySelector("button[onclick=1'ShowCompare()']");
+    const compareBtn = document.querySelector("button[onclick='ShowCompare()']");
 
     if (carArr.length === 2) {
         compareBtn.disabled = false;
@@ -106,4 +106,4 @@ function UpdateCompareTable() {
 }
 document.addEventListener('DOMContentLoaded', function(){
     botaoComparar();
-})
+});
